@@ -7,7 +7,7 @@ import {
 import RootLayout from "./Layouts/RootLayouts"
 
 import DashBoard, { dashBoardLoader } from "./Pages/DashBoard"
-import Create from "./Pages/Create"
+import Create, { createAction } from "./Pages/Create"
 import Profile from "./Pages/Profile"
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<DashBoard />} loader={dashBoardLoader}/>
-        <Route path="/create" element={<Create />} />
+        <Route path="/create" element={<Create />} action={createAction}/>
         <Route path="/profile" element={<Profile />} />
 
       </Route>
